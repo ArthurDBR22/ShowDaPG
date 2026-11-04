@@ -6,7 +6,7 @@
 
 Para baixar o jogo e jogar ele, clique no link abaixo:
 
-👉 **[Baixar Jogo Completo](./jogo-completo)**
+👉 **[Baixar Jogo Completo](https://github.com/ArthurDBR22/ShowDaPG/archive/refs/heads/main.zip)**
 
 *(Para jogar, basta baixar o arquivo acima e abrir o arquivo `index.html` em qualquer navegador web).*
 
