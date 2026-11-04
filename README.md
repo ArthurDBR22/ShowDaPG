@@ -6,9 +6,9 @@
 
 Para baixar o jogo e jogar ele, clique no link abaixo:
 
-👉 **[Baixar Jogo Completo (.ZIP)](./ShowDaPG-Completo.zip)**
+👉 **[Baixar Jogo Completo](./jogo-completo)**
 
-*(Para jogar, basta baixar o arquivo acima, descompactar a pasta em seu computador e abrir o arquivo `index.html` em qualquer navegador web).*
+*(Para jogar, basta baixar o arquivo acima e abrir o arquivo `index.html` em qualquer navegador web).*
 
 ---
 
