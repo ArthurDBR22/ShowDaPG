@@ -31,3 +31,9 @@ Para baixar o jogo e jogar ele, clique no link abaixo:
 * **CSS3**
 * **JavaScript** 
 * IDE utilizada: **Visual Studio Code**
+
+---
+
+## ⚠️ Atenção
+
+* Esse é um projeto feito para a cadeira de Res. Problemas Nat. Discreta - UNIFOR 2026.2
