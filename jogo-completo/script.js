@@ -9,14 +9,14 @@ const bancoPerguntas = {
     ],
     medio: [
         {pergunta: "Dada a P.G. onde a1 = 2 e razão q = 3, qual é o 4º termo?", opcoes: ["18", "27", "54", "81"], correta: 2},
-		{pergunta: "O número de bactérias em uma cultura dobra a cada hora. Se inicialmente havia 150 bactérias, quantas bactérias haverá nessa cultura após 6 horas?", "opcoes": ["900", "4.800", "9.600", "19.200"], correta: 2},
+		{pergunta: "O número de bactérias em uma cultura dobra a cada hora. Se inicialmente havia 150 bactérias, quantas bactérias haverá nessa cultura após 6 horas?", opcoes: ["900", "4.800", "9.600", "19.200"], correta: 2},
 		{pergunta: "Calcule o número de termos (n) da progressão geométrica finita (3, 6, 12, ..., 768):", opcoes: ["7", "8", "9", "10"], correta: 2},
 		{pergunta: "Em uma PG de termos positivos, o primeiro termo é (a1 = 5) e o quarto termo é (a4 = 135). Qual é o valor do quinto termo (a{5}) dessa sequência?", opcoes: ["270", "315", "405", "540"], correta: 2},
 		{pergunta: "Se dividirmos o décimo termo (a{10}) pelo sétimo termo (a{7}) de uma PG qualquer, obtemos o número 125. Qual é o valor da razão (q) dessa progressão?", opcoes: ["5", "15", "25", "125"], correta: 0},
 		{pergunta: "Uma população de insetos aumenta de acordo com uma progressão geométrica. Se no dia 1 havia 50 insetos e no dia 5 havia 800 insetos, quantos insetos havia no dia 3?", opcoes: ["200", "300", "400", "425"], correta: 0}
     ],
     dificil: [
-        {pergunta: "A soma dos 4 primeiros termos da P.G. (1, 2, 4, 8...) é:", opcoes: ["15", "16", "31", "32"], correta: 0},
+        {pergunta: "Os termos da soma S = 4 + 8 + 16 + ... + 2048 estão em progressão geométrica. Assinale o valor de S.", opcoes: ["4092", "4100", "8192", "19688"], correta: 0},
 		{pergunta: "Considere uma progressão geométrica infinitamente decrescente cuja soma dos termos é 8. Retirando-se os termos de índice par, a soma dos termos restantes passa a ser 6. O primeiro termo dessa PG original é:", opcoes: ["2", "3", "4", "9/2"], correta: 2},
 		{pergunta: "Em uma progressão geométrica finita de termos positivos, o produto do primeiro termo pelo último termo é igual a 144. Se a soma do segundo termo com o penúltimo termo é igual a 30, qual é o valor do segundo termo dessa sequência sabendo que ela é crescente?", opcoes: ["4", "6", "8", "12"], correta: 1},
 		{pergunta: "A soma de uma progressão geométrica infinita decrescente é igual a 6. Se multiplicarmos todos os termos dessa progressão por 3, qual será a nova soma da sequência?", opcoes: ["6", "12", "18", "24"], correta: 2},
