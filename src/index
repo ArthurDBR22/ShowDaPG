@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show da P.G.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu Principal -->
+    <div id="menu-screen" class="screen">
+        <h1 class="title">SHOW DA P.G.</h1>
+        <p class="subtitle">Desafio de Progressão Geométrica</p>
+        <button id="btn-jogar" class="btn primary">INICIAR JOGO</button>
+        <button id="btn-tutorial" class="btn secondary">COMO JOGAR (TUTORIAL)</button>
+        <button id="btn-sair" class="btn secondary">SAIR</button>
+    </div>
+
+    <!-- Modal de Tutorial (2 Páginas) -->
+    <div id="tutorial-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Como Jogar - Show da P.G.</h2>
+            <div id="tutorial-page-1" class="tutorial-page">
+                <p><strong>Página 1 de 2: Dinâmica do Jogo e Ajudas</strong></p>
+                <p>• O jogo apresenta <strong>10 perguntas aleatórias</strong> sobre Progressão Geométrica (divididas entre fáceis, médias e difíceis).</p>
+                <p>• As alternativas aparecem em destaque na tela principal em botões grandes para facilitar a escolha.</p>
+                <p>• Na lateral da tela, você conta com <strong>3 ajudas exclusivas</strong>:</p>
+                <p style="margin-left: 15px;">- <strong>-2</strong>: Elimina duas alternativas incorretas.</p>
+                <p style="margin-left: 15px;">- <strong>Sir Cuitos</strong>: Revela a resposta correta (o mascote só fala na 1ª pergunta ou quando chamado!).</p>
+                <p style="margin-left: 15px;">- <strong>Pular</strong>: Você tem até <strong>3 pulos</strong> disponíveis para trocar de pergunta.</p>
+            </div>
+            <div id="tutorial-page-2" class="tutorial-page hidden">
+                <p><strong>Página 2 de 2: Tempo e Ferramentas</strong></p>
+                <p>• <strong>Tempo:</strong> Você tem exatamente <strong>2 minutos (120 segundos)</strong> para responder a cada pergunta do desafio.</p>
+                <p>• <strong>Caderno de Fórmulas:</strong> No canto superior esquerdo da tela do jogo, há um botão permanente contendo todas as fórmulas essenciais de P.G., geometria e juros para te auxiliar nas contas!</p>
+            </div>
+            <div class="modal-buttons">
+                <button id="btn-tutorial-prev" class="btn secondary" style="display: none;">Anterior</button>
+                <button id="btn-tutorial-next" class="btn primary">Próximo</button>
+                <button id="btn-tutorial-close" class="btn secondary">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Caderno de Fórmulas -->
+    <div id="formulas-modal" class="modal hidden">
+        <div class="modal-content formula-box">
+            <h2>📚 Caderno de Fórmulas</h2>
+            <div class="formula-list">
+                <p><strong>Razão da P.G.:</strong> q = Aₙ / Aₙ₋₁</p>
+                <p><strong>Termo Geral da P.G.:</strong> Aₙ = A₁ · qⁿ⁻¹</p>
+                <p><strong>Propriedade do Termo Médio:</strong> b² = a · c</p>
+                <p><strong>Soma da P.G. Infinita:</strong> S = A₁ / (1 - q)</p>
+                <p><strong>Termos Equidistantes:</strong> Aₓ · Aᵧ = A₁ · Aₙ</p>
+                <p><strong>Diagonal do Quadrado:</strong> d = l · √2</p>
+                <p><strong>Juros Compostos:</strong> M = C · (1 + i)ᵗ</p>
+            </div>
+            <button id="btn-formulas-close" class="btn primary" style="margin-top: 15px;">Fechar Caderno</button>
+        </div>
+    </div>
+
+    <!-- Tela do Quiz -->
+    <div id="quiz-screen" class="screen quiz-layout hidden">
+        
+        <!-- Barra Superior (Caderno de Fórmulas + Status) -->
+        <div class="top-bar">
+            <button id="btn-abrir-formulas" class="btn-formula">📖 Caderno de Fórmulas</button>
+            <div class="header-info">
+                <span id="question-counter">Pergunta 1/10</span>
+                <span id="timer-label">Tempo: 02:00</span>
+            </div>
+        </div>
+
+        <!-- Layout Central: Bloco Principal (Esquerda) + Barra de Ajudas (Direita) -->
+        <div class="game-content-wrapper">
+            
+            <!-- Bloco Principal (Pergunta + Respostas + Mascote) -->
+            <div class="main-quiz-block">
+                <div id="question-container">
+                    <h2 id="question-text">Carregando pergunta...</h2>
+                </div>
+
+                <div id="answers-container">
+                    <button class="btn-answer" data-index="0">A) ...</button>
+                    <button class="btn-answer" data-index="1">B) ...</button>
+                    <button class="btn-answer" data-index="2">C) ...</button>
+                    <button class="btn-answer" data-index="3">D) ...</button>
+                </div>
+
+                <!-- Balão do Mascote Sir Cuitos (Condicional) -->
+                <div id="mascot-container" class="hidden">
+                    <div class="mascot-avatar">🤖</div>
+                    <div id="mascot-dialog" class="dialog-box">
+                        Sir Cuitos: 'Olá estudante! Pronto para o desafio de P.G.?'
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra Lateral de Ajudas -->
+            <div class="help-sidebar">
+                <h3>Ajudas</h3>
+                <button id="btn-menos-dois" class="btn-help">-2 (Eliminar 2)</button>
+                <button id="btn-sir-cuitos" class="btn-help">🤖 Sir Cuitos</button>
+                <button id="btn-pula" class="btn-help">⏭️ Pular (3)</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tela de Fim de Jogo / Vitória -->
+    <div id="gameover-screen" class="screen hidden">
+        <h1 id="gameover-title">Fim de Jogo</h1>
+        <p id="gameover-message">Você concluiu o desafio!</p>
+        <button id="btn-reiniciar" class="btn primary">JOGAR NOVAMENTE</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
